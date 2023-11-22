@@ -7,18 +7,15 @@
 
 <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <cucumber.version>7.6.0</cucumber.version>
-        <extentreports.cucumber7.adapter.version>1.7.0</extentreports.cucumber7.adapter.version>
+        <cucumber.version>7.14.0</cucumber.version>
+        <extentreports.cucumber7.adapter.version>1.14.0</extentreports.cucumber7.adapter.version>
         <extentreports.version>5.0.9</extentreports.version>
-        <selenium.version>4.3.0</selenium.version>
-        <webdrivermanager.version>5.2.1</webdrivermanager.version>
-        <testng.version>7.6.1</testng.version>
-        <apache.common.version>2.4</apache.common.version>  
-        <projectlombok.version>1.18.24</projectlombok.version>    
-        <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
-        <maven.surefire.plugin.version>3.0.0-M7</maven.surefire.plugin.version>
-        <maven.compiler.source.version>11</maven.compiler.source.version>
-        <maven.compiler.target.version>11</maven.compiler.target.version>
+        <selenium.version>4.15.0</selenium.version>
+        <testng.version>7.8.0</testng.version>   
+        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.2.1</maven.surefire.plugin.version>
+        <maven.compiler.source.version>17</maven.compiler.source.version>
+        <maven.compiler.target.version>17</maven.compiler.target.version>
     </properties>
  
     <dependencies>
@@ -57,12 +54,6 @@
             <version>${selenium.version}</version>
         </dependency>
  
-        <!-- Web Driver Manager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
-        </dependency>
  
         <!-- TestNG -->
         <dependency>
@@ -70,21 +61,7 @@
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
             <scope>test</scope>
-        </dependency>
- 
-        <!-- Apache Common -->
-        <dependency>
-            <groupId>org.apache.directory.studio</groupId>
-            <artifactId>org.apache.commons.io</artifactId>
-            <version>${apache.common.version}</version>
-        </dependency>
-        
-        <dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${projectlombok.version}</version>
-			<scope>provided</scope>
-		</dependency>
+        </dependency>      
  
     </dependencies>
  

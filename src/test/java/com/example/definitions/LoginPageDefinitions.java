@@ -41,11 +41,11 @@ public class LoginPageDefinitions {
     	
     }
  
-    @Then("User should be able to login sucessfully and new page open")
+    @Then("User should be able to login successfully and new page open")
     public void verifyLogin() {
  
         // Verify home page
-        Assert.assertTrue(objHomePage.getHomePageText().contains("Employee Information"));
+        Assert.assertTrue(objHomePage.getHomePageText().contains("Dashboard"));
  
     }
     
@@ -55,6 +55,12 @@ public class LoginPageDefinitions {
         // Verify home page
     	Assert.assertEquals(objLogin.getErrorMessage(),expectedErrorMessage);
  
+    }
+    
+    @Then("User should be able to see a message {string} below Username")
+    public void verifyMissingUsernameMessage(String message) {
+    	
+    	Assert.assertEquals(objLogin.getMissingUsernameText(),message);
     }
     
     @Then("User should be able to see LinkedIn Icon")

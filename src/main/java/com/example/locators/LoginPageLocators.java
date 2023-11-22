@@ -13,6 +13,12 @@ public class LoginPageLocators {
  
     @FindBy(id = "logInPanelHeading")
     public WebElement titleText;
+    
+    @FindBy(xpath = "//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span")
+    public WebElement missingUsernameErrorMessage;
+    
+    @FindBy(xpath = "//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span")
+    public WebElement missingPasswordErrorMessage;
  
     @FindBy(xpath = "//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
     public WebElement login;

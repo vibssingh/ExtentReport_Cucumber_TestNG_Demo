@@ -4,25 +4,22 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.chrome.ChromeOptions;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HelperClass {
 
 	 private static HelperClass helperClass;
      
-	    private static WebDriver driver;
-	    private static WebDriverWait wait;
+	    private static WebDriver driver; 
 	    public final static int TIMEOUT = 10;
 	      
 	     private HelperClass() {
-	           
-	        WebDriverManager.chromedriver().setup();
-	        driver = new ChromeDriver();
-	        wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
-	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
-	        driver.manage().window().maximize();
+	              
+	    	 ChromeOptions options = new ChromeOptions();
+	         options.addArguments("--start-maximized");
+	         driver = new ChromeDriver(options);
+	         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 	     }      
 	              
 	    public static void openPage(String url) {

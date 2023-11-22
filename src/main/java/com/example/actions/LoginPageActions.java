@@ -36,8 +36,18 @@ LoginPageLocators loginPageLocators = null;
         return loginPageLocators.titleText.getText();
     }
     
+   // Get the error message when username is blank
+    public String getMissingUsernameText() {
+        return loginPageLocators.missingUsernameErrorMessage.getText();
+    }
     
-    // Get the title of Login Page
+   // Get the error message when password is blank
+    public String getMissingPasswordText() {
+        return loginPageLocators.missingPasswordErrorMessage.getText();
+    }
+    
+    
+    // Get the Error Message
     public String getErrorMessage() {
         return loginPageLocators.errorMessage.getText();
     }
